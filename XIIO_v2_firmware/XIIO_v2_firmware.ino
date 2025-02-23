@@ -151,6 +151,8 @@ uint16_t plates;
 uint16_t platesLast;
 uint8_t activePlate;
 
+uint16_t platesFilteredData[12];
+
 uint8_t notePlates;
 uint8_t notePlatesLast;
 uint8_t activeNotePlates;
@@ -419,6 +421,10 @@ void setup() {
   cap.setThreshholds(3, 2);
 
   Serial.println("MPR121 initialized");
+
+
+
+
 
   // recall last settings
   preset = EEPROM.read(1023);
